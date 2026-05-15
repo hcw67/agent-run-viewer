@@ -1,0 +1,2 @@
+# agent-run-viewer runtime dependencies
+# None. The bundled scripts use only the Python 3.10+ standard library.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Run Viewer"
+  short_description: "Turn AI coding-agent logs into user-facing run reports."
+  default_prompt: "Use $agent-run-viewer to analyze this coding-agent run and generate a user-facing report."
