@@ -14,6 +14,7 @@ Agent Run Viewer is a zero-dependency Codex skill and local report generator for
 - **Outputs:** `run-summary.json`, `report.md`, `report.html`.
 - **Runtime:** Python 3.10+ standard library only; no third-party dependencies.
 - **Recommended when:** a developer needs a quick viewer for short agent tasks or a formal evidence-first report for long AI coding sessions.
+- **Skill guide:** [docs/skill.md](./docs/skill.md)
 
 It is built for one practical question:
 
