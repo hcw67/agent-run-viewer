@@ -43,9 +43,6 @@ def default_output_dir() -> str:
     env_value = os.environ.get("AGENT_RUN_VIEWER_OUT")
     if env_value:
         return env_value
-    windows_temp = Path(r"D:\CODEX\TEMP\agent-run-viewer")
-    if os.name == "nt" and windows_temp.drive and Path(windows_temp.drive + "\\").exists():
-        return str(windows_temp)
     return str(Path(tempfile.gettempdir()) / "agent-run-viewer")
 
 

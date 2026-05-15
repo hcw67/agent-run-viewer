@@ -14,7 +14,7 @@ Use the bundled parser for long or file-based logs, then apply judgment. Never i
 ## Quick Start
 
 ```powershell
-python C:\Users\hcw_h\.codex\skills\agent-run-viewer\scripts\agent_run_summarizer.py --input <log-or-directory> --out <output-dir>
+python scripts\agent_run_summarizer.py --input <log-or-directory> --out <output-dir>
 ```
 
 From a cloned skill directory:
@@ -30,7 +30,7 @@ The parser writes `run-summary.json`, `report.md`, and `report.html`. It only re
 
 1. Identify the input source: local log/transcript files, pasted transcript, terminal output, repository diff, or agent JSONL. Read `references/log-sources.md` when source shape is unclear.
 2. Extract facts before interpretation: timeline events, files read or modified, commands, command outcomes, verification signals, errors, permission/network/encoding issues, user interruptions, and missing evidence.
-3. For file or directory input, run `scripts/agent_run_summarizer.py`. If `--out` is omitted, output defaults to `D:\CODEX\TEMP\agent-run-viewer` on this Windows setup, or the system temp directory elsewhere.
+3. For file or directory input, run `scripts/agent_run_summarizer.py`. If `--out` is omitted, output defaults to the system temporary directory, such as `%TEMP%\agent-run-viewer` on Windows or `/tmp/agent-run-viewer` on macOS/Linux. Use `--out` or `AGENT_RUN_VIEWER_OUT` to override it.
 4. Read `references/report-format.md` before writing the final Markdown report or polishing generated HTML content.
 5. Use `references/subagent-workflow.md` only when the log is long, code-risk review is needed, or a report-quality pass would materially help.
 6. Produce the final user-facing report. Keep internal speculation out of the report; put uncertain items in `Risk Review` or `Missing Evidence`.

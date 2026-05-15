@@ -232,8 +232,9 @@ Options:
 
 If `--out` is omitted, the script writes to:
 
-- `D:\CODEX\TEMP\agent-run-viewer` on this Windows setup when available
-- otherwise the system temp directory, such as `/tmp/agent-run-viewer`
+- the system temporary directory, such as `%TEMP%\agent-run-viewer` on Windows or `/tmp/agent-run-viewer` on macOS/Linux
+
+You can override the output path with `--out <directory>` or the `AGENT_RUN_VIEWER_OUT` environment variable.
 
 ## Example
 
