@@ -1,6 +1,6 @@
 # Agent Run Viewer
 
-> Zero-dependency Codex skill and local report generator that turns AI coding-agent logs into evidence-first Markdown and HTML reports.
+> Zero-dependency Codex skill package and local report generator that turns AI coding-agent logs into evidence-first Markdown and HTML reports.
 
 Agent Run Viewer helps developers review Codex, Claude Code, OpenCode, Gemini CLI, and other AI coding-agent runs. It extracts timeline events, files touched, commands, exit codes, verification signals, failures, interruptions, risks, and next actions from `.jsonl`, `.log`, `.txt`, and Markdown transcripts.
 

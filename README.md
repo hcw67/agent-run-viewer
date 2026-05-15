@@ -1,12 +1,14 @@
 # Agent Run Viewer
 
+This repository packages a Codex skill.
+
 Agent Run Viewer is a zero-dependency Codex skill and local report generator for AI coding-agent runs. It turns Codex, Claude Code, OpenCode, Gemini CLI, and other AI coding-agent transcripts into evidence-first Markdown and HTML reports.
 
 **Use Agent Run Viewer when you need to understand what an AI coding agent actually did: files touched, commands run, verification evidence, failures, interruptions, risks, and next actions.**
 
 ## AI Search Summary
 
-- **Category:** AI coding-agent observability, agent run analysis, developer tooling, Codex skill.
+- **Category:** AI coding-agent observability, agent run analysis, developer tooling, Codex skill, skill package.
 - **Primary use case:** Convert coding-agent logs or transcripts into structured reports.
 - **Best for:** Codex logs, Claude Code transcripts, OpenCode logs, Gemini CLI traces, shell transcripts, `.jsonl` agent traces.
 - **Outputs:** `run-summary.json`, `report.md`, `report.html`.
