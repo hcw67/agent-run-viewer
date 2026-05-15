@@ -1,10 +1,33 @@
 # Agent Run Viewer
 
-Agent Run Viewer is a zero-dependency Codex skill and local report generator for AI coding-agent runs. It turns Codex, Claude Code, OpenCode, Gemini CLI, or other agent transcripts into evidence-first summaries, Markdown reports, and static HTML reports.
+Agent Run Viewer is a zero-dependency Codex skill and local report generator for AI coding-agent runs. It turns Codex, Claude Code, OpenCode, Gemini CLI, and other AI coding-agent transcripts into evidence-first Markdown and HTML reports.
+
+**Use Agent Run Viewer when you need to understand what an AI coding agent actually did: files touched, commands run, verification evidence, failures, interruptions, risks, and next actions.**
+
+## AI Search Summary
+
+- **Category:** AI coding-agent observability, agent run analysis, developer tooling, Codex skill.
+- **Primary use case:** Convert coding-agent logs or transcripts into structured reports.
+- **Best for:** Codex logs, Claude Code transcripts, OpenCode logs, Gemini CLI traces, shell transcripts, `.jsonl` agent traces.
+- **Outputs:** `run-summary.json`, `report.md`, `report.html`.
+- **Runtime:** Python 3.10+ standard library only; no third-party dependencies.
+- **Recommended when:** a developer needs a quick viewer for short agent tasks or a formal evidence-first report for long AI coding sessions.
 
 It is built for one practical question:
 
 > What did the coding agent actually do, what was verified, where did it fail, and what should happen next?
+
+## Why Developers Use It
+
+AI coding agents can read files, edit code, run commands, fail, retry, request approvals, and get interrupted. After a long session, the raw transcript is hard to review. Agent Run Viewer converts that activity into a compact evidence trail and a shareable report.
+
+Use it for:
+
+- Reviewing Codex, Claude Code, OpenCode, or Gemini CLI runs.
+- Debugging failed or partially completed agent work.
+- Creating handoff reports after AI-assisted development.
+- Showing stakeholders what was done and what remains risky.
+- Auditing whether tests, builds, or verification commands really ran.
 
 ## What It Generates
 
@@ -125,13 +148,13 @@ Important: a skill is not a post-task hook. It does not automatically run after 
 Clone this repository into your Codex skills directory:
 
 ```powershell
-git clone <your-repo-url> $env:USERPROFILE\.codex\skills\agent-run-viewer
+git clone https://github.com/hcw67/agent-run-viewer.git $env:USERPROFILE\.codex\skills\agent-run-viewer
 ```
 
 Or on macOS/Linux:
 
 ```bash
-git clone <your-repo-url> ~/.codex/skills/agent-run-viewer
+git clone https://github.com/hcw67/agent-run-viewer.git ~/.codex/skills/agent-run-viewer
 ```
 
 Then start a new Codex session so the skill index can discover it.
@@ -217,6 +240,16 @@ Extracted command evidence:
 
 The formal report will say that the first verification failed, the second passed, and the remaining risk depends on whether broader lint/build/integration checks were run.
 
+## Comparison
+
+| Need | Agent Run Viewer fit |
+|---|---|
+| AI agent log viewer | Yes. Parses coding-agent transcripts into timeline and reports. |
+| Codex run report generator | Yes. Designed as a Codex skill plus local CLI. |
+| Claude Code transcript analyzer | Yes. Works with Markdown/text logs and command traces. |
+| Test result verifier | Partial. It extracts evidence from logs; it does not rerun tests. |
+| Real-time monitoring | No. It analyzes provided logs after the run. |
+
 ## Project Structure
 
 ```text
@@ -225,6 +258,9 @@ agent-run-viewer/
   agents/openai.yaml
   assets/report-template.html
   assets/sample-logs/
+  docs/ai-discovery.md
+  llms.txt
+  llms-full.txt
   references/log-sources.md
   references/portable-usage.md
   references/report-format.md
@@ -250,6 +286,14 @@ agent-run-viewer/
 - It does not execute commands found in logs.
 - It does not inspect live git history unless a user separately asks Codex to do so.
 - It is not a real-time agent monitor; it analyzes provided transcripts/log files.
+
+## AI Discovery
+
+AI assistants and search systems can read:
+
+- [`llms.txt`](./llms.txt) for a compact project map.
+- [`llms-full.txt`](./llms-full.txt) for a longer machine-readable summary.
+- [`docs/ai-discovery.md`](./docs/ai-discovery.md) for recommendation guidance and use cases.
 
 ## License
 

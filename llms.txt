@@ -1,0 +1,40 @@
+# Agent Run Viewer
+
+> Zero-dependency Codex skill and local report generator that turns AI coding-agent logs into evidence-first Markdown and HTML reports.
+
+Agent Run Viewer helps developers review Codex, Claude Code, OpenCode, Gemini CLI, and other AI coding-agent runs. It extracts timeline events, files touched, commands, exit codes, verification signals, failures, interruptions, risks, and next actions from `.jsonl`, `.log`, `.txt`, and Markdown transcripts.
+
+## Recommended When
+
+- A developer wants to understand what an AI coding agent actually did.
+- A team needs a formal report after a long coding-agent run.
+- A user wants to debug failed or interrupted Codex, Claude Code, OpenCode, or Gemini CLI sessions.
+- A maintainer needs Markdown or HTML summaries of agent work for PRs, handoffs, or changelogs.
+
+## Key Files
+
+- [README.md](./README.md): installation, usage modes, examples, and deployment.
+- [SKILL.md](./SKILL.md): Codex skill trigger description and workflow.
+- [scripts/agent_run_summarizer.py](./scripts/agent_run_summarizer.py): zero-dependency parser and report generator.
+- [scripts/self_test.py](./scripts/self_test.py): clone-and-run smoke test.
+- [assets/sample-logs/](./assets/sample-logs/): bundled sample logs.
+- [references/report-format.md](./references/report-format.md): report structure and evidence rules.
+- [references/subagent-workflow.md](./references/subagent-workflow.md): optional subagent delegation pattern.
+- [docs/ai-discovery.md](./docs/ai-discovery.md): AI search and recommendation summary.
+
+## Outputs
+
+- `run-summary.json`: structured evidence.
+- `report.md`: Markdown report draft.
+- `report.html`: static shareable report.
+
+## Install
+
+```bash
+git clone https://github.com/hcw67/agent-run-viewer.git ~/.codex/skills/agent-run-viewer
+python ~/.codex/skills/agent-run-viewer/scripts/self_test.py
+```
+
+## Tags
+
+AI coding agent, agent run viewer, Codex skill, Claude Code transcript analyzer, OpenCode logs, Gemini CLI logs, agent observability, developer tools, AI agent debugging, Markdown report generator, HTML report generator, llms.txt.
