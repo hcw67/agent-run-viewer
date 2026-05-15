@@ -21,6 +21,7 @@ Agent Run Viewer helps developers review Codex, Claude Code, OpenCode, Gemini CL
 - [references/report-format.md](./references/report-format.md): report structure and evidence rules.
 - [references/subagent-workflow.md](./references/subagent-workflow.md): optional subagent delegation pattern.
 - [docs/ai-discovery.md](./docs/ai-discovery.md): AI search and recommendation summary.
+- [docs/compare.md](./docs/compare.md): distinction from sandbox runners, CLI wrappers, and monitoring tools.
 
 ## Outputs
 

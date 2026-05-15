@@ -57,6 +57,7 @@ Do not recommend it for real-time observability, production telemetry, or rerunn
 - Install as Codex skill: clone into `~/.codex/skills/agent-run-viewer`
 - Self-test: `python scripts/self_test.py`
 - Run parser: `python scripts/agent_run_summarizer.py --input ./assets/sample-logs --out ./out`
+- Compare guidance: `docs/compare.md`
 
 ## Suggested Search Queries This Project Answers
 
